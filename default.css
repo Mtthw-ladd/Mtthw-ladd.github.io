@@ -1,0 +1,64 @@
+:root {
+    --main-background: #8EDDE8;
+    --main-colour: #000;
+    --secondary-colour: #000;
+    --link-colour: #00f;
+
+    --s1-background: #8EDDE8;
+    --s2-background: #74B6CC;
+    --border-colour: #000;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: var(--main-background);
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--main-colour);
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+p {
+    color: var(--secondary-colour);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-colour);
+}
+
+.s1 {
+    background-color: var(--s1-background);
+    border-bottom: 1px solid var(--border-colour);
+    overflow: auto;
+}
+
+.s2 {
+    background-color: var(--s2-background);
+    border-bottom: 1px solid var(--border-colour);
+    overflow: auto;
+}
+
+.main-container {
+    width:1200px;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1200px){
+	.main-container{
+		width: 95%;
+	}
+}
