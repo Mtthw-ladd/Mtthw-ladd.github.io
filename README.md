@@ -1,3 +1,3 @@
 # Personal Portfolio
 
-## Link: [Website](https://mtthw-ladd.github.io/)
+## [Link](https://mtthw-ladd.github.io/)
