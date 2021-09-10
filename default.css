@@ -14,6 +14,9 @@
 
     --previewBG: rgb(251, 249, 243, 0.8);
     --preview-shadow: #FF6E79;
+
+    --btn-colour: black;
+	--btn-hover: #696969;
 }
 
 html, body {
@@ -269,6 +272,140 @@ a:hover {
 
 .social-links > ul {
     font-size: 20px;
+}
+
+#card-container {
+	margin-bottom: 10px;
+	display: grid;
+	justify-items: center;
+	grid-template-column: 1fr 1fr 1fr;
+	grid-template-areas:
+		'card1 card2 card3'
+	;
+}
+
+#ProjectsHeader {
+	grid-area: ProjectsHeader;
+	width: 75%;
+    margin: 0 auto;
+}
+
+#card1 {
+	grid-area: card1;
+}
+
+
+#card2 {
+	grid-area: card2;
+}
+
+#card3 {
+	grid-area: card3;
+}
+
+.card {
+	color: #FFF;
+	background-image: url("./media/card_background.png");
+	background-size: cover;
+	padding: 10rem 0 0;
+	max-width: 35ch;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.card-content {
+	--padding: 1.5rem;
+	padding: var(--padding);
+	background: linear-gradient(
+		rgba(0,0,0,0), 
+		rgba(0,0,0,0.3) 20%, 
+		rgba(0,0,0,1)
+	);
+}
+
+.card-body  {
+	color: rgb(255 255 255 / 0.9);
+}
+
+.card-title {
+	color: #FFF;
+	width: max-content;
+	max-width: 100%;
+	position: relative;
+}
+
+.card-title::after {
+	content: "";
+	position: absolute;
+	height: 3px;
+	left: calc(var(--padding) * -1);
+	bottom: 0;
+	width: calc(100% + var(--padding));
+	background: #F00;
+}
+
+.card-button {
+	cursor: pointer;
+	display: inline;
+	text-decoration: none;
+	color: #FFF;
+	background-color: #F00;
+	padding: 0.5em 1.25em;
+	border-radius: 0.25rem;
+}
+
+.card-button:hover,
+.card-button:focus {
+	background-color: #000;
+}
+
+
+#contact-form{
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+	border: 1px solid var(--border-colour);
+	padding: 15px;
+	border-radius: 5px;
+	background-color: var(--s2-background);
+	margin-bottom: 50px;
+
+}
+
+#contact-form label{
+	line-height: 2.7em;
+}
+
+#contact-form textarea{
+	min-height: 100px;
+	font-size: 14px;
+}
+
+.input-field{
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom:10px; 
+	background-color: var(--secondary-colour);
+	border-radius: 5px;
+	border:1px solid var(--border-colour);
+	font-size: 14px;
+}
+
+#submit-btn{
+	margin-top: 10px;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom:10px; 
+	color: #fff;
+	background-color: var(--btn-colour);
+	border:none;
+    border-radius: 5px;
+}
+
+#submit-btn:hover{
+    cursor: pointer;
+    background-color: var(--btn-hover);
+    color: #000;
 }
 
 @media screen and (max-width: 75%){
